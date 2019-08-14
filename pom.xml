@@ -1,0 +1,113 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>SmsSending</groupId>
+    <artifactId>SmsSending</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+
+    <properties>
+        <java.version>1.3</java.version>
+        <j2me.version>2.0.2</j2me.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>midpapi20</artifactId>
+            <version>${j2me.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>cldcapi11</artifactId>
+            <version>${j2me.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cinterion</groupId>
+            <artifactId>ehs5-cwm</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cinterion</groupId>
+            <artifactId>ehs5-cwm-lib</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cinterion</groupId>
+            <artifactId>ehs5-rt</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>ivt</id>
+            <url>http://nexus.ivt.lan/content/groups/public/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>repo1</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>ivt</id>
+            <url>http://nexus.ivt.lan/content/groups/public/</url>
+            <layout>default</layout>
+        </pluginRepository>
+        <pluginRepository>
+            <id>repo1</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>ivt</id>
+            <name>Local repository of ivt for releases</name>
+            <url>http://nexus.ivt.lan:8080/content/repositories/ivt</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <target>1.3</target>
+                    <source>1.3</source>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <MIDlet-Vendor>IVT BelGU</MIDlet-Vendor>
+                            <MIDlet-Version>2.1</MIDlet-Version>
+                            <Created-By>IVT BelGU</Created-By>
+                            <MIDlet-Name>SmsSending</MIDlet-Name>
+                            <MicroEdition-Configuration>CLDC-1.1</MicroEdition-Configuration>
+                            <MIDlet-1>MyMIDlet, , midlet.MyMIDlet</MIDlet-1>
+                            <MicroEdition-Profile>IMP-NG</MicroEdition-Profile>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

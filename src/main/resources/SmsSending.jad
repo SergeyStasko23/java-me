@@ -1,0 +1,12 @@
+MIDlet-Jar-URL: a:/smssending/SmsSending.jar
+MIDlet-Jar-Size: 6607
+MIDlet-Name: SmsSending
+MIDlet-Vendor: IVT BelGU
+MIDlet-Version: 2.1
+Created-By: IVT BelGU
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: IMP-NG
+Oracle-MIDlet-Autostart: 1
+Oracle-MIDlet-Restart: true
+Oracle-MIDlet-Restart-Count: 1
+MIDlet-1: MyMIDlet, , midlet.MyMIDlet
