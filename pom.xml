@@ -46,37 +46,6 @@
         </dependency>
     </dependencies>
 
-    <repositories>
-        <repository>
-            <id>ivt</id>
-            <url>http://nexus.ivt.lan/content/groups/public/</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <id>repo1</id>
-            <url>http://repo1.maven.org/maven2/</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>ivt</id>
-            <url>http://nexus.ivt.lan/content/groups/public/</url>
-            <layout>default</layout>
-        </pluginRepository>
-        <pluginRepository>
-            <id>repo1</id>
-            <url>http://repo1.maven.org/maven2/</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <distributionManagement>
-        <repository>
-            <id>ivt</id>
-            <name>Local repository of ivt for releases</name>
-            <url>http://nexus.ivt.lan:8080/content/repositories/ivt</url>
-        </repository>
-    </distributionManagement>
-
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
@@ -97,9 +66,9 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <MIDlet-Vendor>IVT BelGU</MIDlet-Vendor>
+                            <MIDlet-Vendor>Stacy</MIDlet-Vendor>
                             <MIDlet-Version>2.1</MIDlet-Version>
-                            <Created-By>IVT BelGU</Created-By>
+                            <Created-By>Stacy</Created-By>
                             <MIDlet-Name>SmsSending</MIDlet-Name>
                             <MicroEdition-Configuration>CLDC-1.1</MicroEdition-Configuration>
                             <MIDlet-1>MyMIDlet, , midlet.MyMIDlet</MIDlet-1>
